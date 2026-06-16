@@ -98,7 +98,7 @@ st.sidebar.info("💡 **Tip:** Asegúrate de cargar o seleccionar un dataset en 
 if opcion_modulo == "1. Home":
     st.title("📊 App Analizadora de Datasets con Streamlit")
     st.markdown("### Proyecto Final Integrador - Especialización Python for Analytics")
-    st.caption("**Autor:** [Nombre del Estudiante] | **Año:** 2026")
+    st.caption("**Autor:** [Jhoana Gonzales Caballero] | **Año:** 2026")
     st.markdown("---")
     
     col1, col2 = st.columns([2, 1])
