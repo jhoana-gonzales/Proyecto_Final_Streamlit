@@ -157,7 +157,7 @@ elif opcion_modulo == "2. Carga y Perfil del Dataset":
             "Seleccione un archivo preconfigurado:",
             [
                 "Seleccione una opción...",
-                "Al_Impact_on_Jobs_2030.csv",
+                "AI_Impact_on_Jobs_2030.csv",  # CORRECCIÓN: Cambiado de "Al_Impact..." a "AI_Impact..."
                 "sample_-_superstore.csv",
                 "synthetic_ecommerce_order_risk_dataset.csv",
                 "Teen_Mental_Health_Dataset.csv"
@@ -575,48 +575,4 @@ elif opcion_modulo == "4. Análisis Visual":
                 c_store1, c_store2 = st.columns(2)
                 with c_store1:
                     if "Category" in df_analisis.columns and "Sales" in df_analisis.columns:
-                        fig_st1 = px.bar(df_analisis.groupby("Category")["Sales"].sum().reset_index(), x="Category", y="Sales", title="Ventas Totales por Categoría de Producto", text_auto=True)
-                        st.plotly_chart(fig_st1, use_container_width=True)
-                with c_store2:
-                    if "Region" in df_analisis.columns and "Profit" in df_analisis.columns:
-                        fig_st2 = px.box(df_analisis, x="Region", y="Profit", title="Rentabilidad y Márgenes Operativos por Región")
-                        st.plotly_chart(fig_st2, use_container_width=True)
-                st.write("**Insight Operativo:** Evalúa la rentabilidad real comparando si los altos volúmenes de venta en ciertas regiones se traducen verdaderamente en utilidad neta para la tienda.")
-
-            # DETECCIÓN DATASET 3: E-commerce Risk
-            elif "ecommerce" in nombre_file or "risk" in nombre_file:
-                st.success("🎯 Dataset Detectado: **Synthetic E-commerce Order Risk Dataset**")
-                
-                if "risk_label" in df_analisis.columns or "is_fraud" in df_analisis.columns:
-                    target_risk = "risk_label" if "risk_label" in df_analisis.columns else "is_fraud"
-                    st.markdown(f"#### Distribución de Alertas de Fraude y Riesgo ({target_risk})")
-                    
-                    c_risk1, c_risk2 = st.columns([2, 1])
-                    with c_risk1:
-                        if "payment_method" in df_analisis.columns:
-                            fig_risk = px.histogram(df_analisis, x="payment_method", color=target_risk, barmode="group", title="Nivel de Riesgo según el Método de Pago Empleado")
-                            st.plotly_chart(fig_risk, use_container_width=True)
-                    with c_risk2:
-                        st.write("**Análisis Estratégico de Fraude:**")
-                        st.dataframe(df_analisis[target_risk].value_counts(normalize=True).round(4)*100)
-                        st.write("Identificar qué pasarelas de pago concentran la mayor densidad de reclamos o contracargos permite ajustar las reglas de validación en tiempo real.")
-
-            # DETECCIÓN DATASET 4: Teen Mental Health
-            elif "teen" in nombre_file or "mental" in nombre_file or "health" in nombre_file:
-                st.success("🎯 Dataset Detectado: **Teen Mental Health Dataset**")
-                
-                if "daily_social_media_hours" in df_analisis.columns and "sleep_hours" in df_analisis.columns:
-                    st.markdown("#### Relación: Horas de Redes Sociales vs Horas de Sueño")
-                    fig_teen = px.scatter(df_analisis, x="daily_social_media_hours", y="sleep_hours", color="stress_level" if "stress_level" in df_analisis.columns else None, title="Exploración de Hábitos Digitales y Descanso")
-                    st.plotly_chart(fig_teen, use_container_width=True)
-                    st.write("**Interpretación:** Espacio orientado a observar correlaciones de comportamiento general. Evitar emitir juicios o diagnósticos de carácter clínico basados exclusivamente en esta gráfica.")
-                    
-            else:
-                st.info("Dataset personalizado detectado. Para activar gráficos preconfigurados de negocio, cargue uno de los 4 archivos oficiales estipulados en la rúbrica del proyecto.")
-                
-            st.markdown("---")
-            st.markdown("#### 🏁 Conclusión General para la Toma de Decisiones")
-            st.markdown("> *Las visualizaciones e interacciones ejecutadas demuestran que el comportamiento de los datos varía drásticamente según el contexto del negocio. Una correcta limpieza de datos realizada previamente en el Módulo 3 asegura que los patrones gráficos visualizados aquí correspondan a realidades operativas fiables.*")
-            
-    else:
-        st.error("❌ No se registran datos listos para procesar de forma visual. Por favor, cargue un archivo válido en el Módulo 2.")
+                        fig_st1 = px.bar(df_analisis.groupby("Category")["Sales
