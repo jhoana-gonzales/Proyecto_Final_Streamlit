@@ -8,7 +8,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
 import seaborn as sns
-import chardet  # NUEVA LIBRERÍA PARA DETECTAR CODIFICACIÓN
+import chardet  as ch # NUEVA LIBRERÍA PARA DETECTAR CODIFICACIÓN
 
 # Configuración de la página de Streamlit (Layout Ancho para mejor visualización de tableros)
 st.set_page_config(
