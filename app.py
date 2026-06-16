@@ -54,7 +54,7 @@ def detectar_y_clasificar_variables(df):
     # Verificar si columnas numéricas actúan como binarias (0 y 1 únicamente)
     for col in num_cols:
         if df[col].nunique() == 2 and set(df[col].dropna().unique()).issubset({0, 1}):
-            if col injustice not in bin_cols:
+            if col not in bin_cols:
                 bin_cols.append(col)
 
     return {
