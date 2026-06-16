@@ -133,8 +133,6 @@ if opcion_modulo == "1. Home":
         st.info("**2. Sample - Superstore**\n\nRegistro histórico de ventas, pedidos, rentabilidad y comportamiento comercial de una tienda.")
         st.info("**3. E-commerce Order Risk**\n\nEvaluación de pedidos en comercio electrónico enfocados en la detección de fraude y riesgos operativos.")
         st.info("**4. Teen Mental Health**\n\nHábitos digitales y variables de bienestar socioemocional en adolescentes (Enfoque exploratorio).")
-        
-df = pd.read_csv("AI_Impact_on_Jobs_2030.csv")
 
 # ==============================================================================
 # MÓDULO 2: CARGA Y PERFIL DEL DATASET
