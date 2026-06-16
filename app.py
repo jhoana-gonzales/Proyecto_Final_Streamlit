@@ -620,7 +620,7 @@ elif opcion_modulo == "4. Análisis Visual":
             
     else:
         st.error("❌ No se registran datos listos para procesar de forma visual. Por favor, cargue un archivo válido en el Módulo 2.")
-📝 Corrección realizada:
+ Corrección realizada:
 Líneas modificadas (aproximadamente línea 148-150):
 
 python
