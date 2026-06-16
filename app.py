@@ -630,7 +630,7 @@ elif opcion_modulo == "4. Análisis Visual":
 # DESPUÉS (corregido):
 "AI_Impact_on_Jobs_2030.csv",  # CORRECCIÓN: Cambiado de "Al_Impact..." a "AI_Impact..."
 #🔍 Explicación del error:
-El error [Errno 2] No such file or directory: 'data/Al_Impact_on_Jobs_2030.csv' se producía porque:
+# El error [Errno 2] No such file or directory: 'data/Al_Impact_on_Jobs_2030.csv' se producía porque:
 
 El nombre del archivo en el código tenía una "l" minúscula en lugar de una "I" mayúscula (Al vs AI)
 
